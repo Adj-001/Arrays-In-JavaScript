@@ -1,0 +1,172 @@
+Arrays in JavaScript or any other Programming language are the fundamental data structure that allows us to store & manipulate a collection of items. They are similar to lists in other languages but have a few differences & a unique set of built-in methods for working with them & in the process make JavaScript Programming cool, easy & mature at the same time.
+
+How to create and initialize an Array in JavaScript
+
+Accessing & Modifying elements in an Array
+
+Common methods for manipulating an array
+
+Difference between mutable and immutable methods
+
+Using the spread operator & Array.from() to create and copy arrays
+
+Creating and Initializing Arrays
+
+There are a few different ways to create and initialize an array in JavaScript.
+
+The most basic way is to use the Array constructor:
+
+const arr = new Array(); // This creates an empty array.
+
+We can also pass in arguments to the Array constructor to create an array with pre-populated values:
+
+const arr = [1,5.6,"Mango"]; // [1,5.6,"Mango"]
+
+// There is other ways to create an array, one of which is :-
+const arr = new Array(1,5.6,"Mango") // [1,5.6,"Mango"]
+
+Both of the above ways create a new array having the elements passed in them.
+
+Another creative & unproductive way can be to first create an empty array and then pass the elements into it by using the push method(we will discuss this in detail going forward) first, let's see how it works: -
+
+const arr = [];
+arr.push(1); // [1]
+arr.push(5.6); // [1,5.6]
+arr.push("Mango" , "Apple"); // [1,5.6,"Mango","Apple"]
+
+Arrays are a fundamental data structure in JavaScript that allow us to store and manipulate a collection of items. They are similar to lists in other programming languages but have a few key differences and a unique set of built-in methods for working with them.
+
+In this article, we'll cover the following topics:
+
+How to create and initialize an array in JavaScript
+
+Accessing and modifying elements in an array
+
+Common methods for manipulating arrays
+
+The difference between mutable and immutable methods
+
+Using the spread operator and Array.from() to create and copy arrays
+
+Creating and Initializing Arrays
+
+There are a few different ways to create and initialize an array in JavaScript.
+
+The most basic way is to use the Array constructor:
+
+arr = new Array();
+
+
+This creates an empty array. We can also pass in arguments to the Array constructor to create an array with pre-populated values:
+
+arr = new Array(1, 2, 3); // [1, 2, 3]
+
+
+Note that if you pass in a single argument to the Array constructor that is a number, it will create an array with that many empty slots rather than creating an array with a single element.
+
+Another way to create an array is to use an array literal, which is simply a list of values enclosed in square brackets:
+
+arr = [1, 2, 3]; // [1, 2, 3]
+
+
+You can also use an array literal to create an empty array and then add elements to it later:
+
+arr = [];
+arr.push(1); // [1]
+arr.push(2); // [1, 2]
+arr.push(3); // [1, 2, 3]
+
+
+Accessing and Modifying Elements
+
+As and when we are done with creating an array, we can always access and further modify its array anytime using square bracket notation..  Here it is how can we do the same:-
+
+console.log(arr); // will give the entire array as an output [1,5.6,"Mango","Apple"]
+console.log(arr[0]); // 1
+console.log(arr[1]); // 5.6
+console.log(arr[3]); // Apple
+console.log(arr[4]); // undefined :- means not being initialized till now.
+
+We have seen that if you try to access an element that is beyond the current length of the array, you will get the value undefined.
+
+Now to simply modify the elements of the array we have to use the index of the array which we want to modify:-
+
+arr[0] = "5";
+console.log(arr) // [5,5.6,"Mango","Apple"]
+
+Common Array Methods
+
+JavaScript provides a number of built-in methods/functions for working with arrays. Some of the most commonly used methods are:
+
+push() adds one or more elements to the end of an array and returns the new length of the array.
+
+pop() removes the last element from an array and returns that element.
+
+shift() removes the first element from an array and returns that element.
+
+unshift() adds one or more elements to the beginning of an array
+
+concat(): This method creates a new array by concatenating two or more arrays.
+
+every(): This method tests whether all elements in the array pass a test implemented by a provided function.
+
+filter(): This method creates a new array with all elements that pass a test implemented by a provided function.
+
+forEach(): This method executes a provided function once for each element in the array.
+
+map(): This method creates a new array with the results of calling a provided function on every element in the array.
+
+reduce(): This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+
+some(): This method tests whether at least one element in the array passes a test implemented by a provided function.
+
+sort(): This method sorts the elements of an array in place and returns the sorted array.
+
+slice(): This method returns a shallow copy of a portion of an array into a new array object.
+
+splice(): This method adds or removes elements from an array.
+
+Push() 
+
+console.log(arr); // will give the entire array as an output [1,5.6,"Mango","Apple"]
+arr.push("Banana") // will add one element to the end of arr ; we can also add more than one elements using push() method.
+// Now the updated arr : [1,5.6,"Mango","Apple","Banana"]  
+
+Pop()
+
+arr.pop() // removes last element from the arr
+// Now the updated arr : [1,5.6,"Mango","Apple"]  
+
+shift() 
+
+arr.shift() // removes first element from the arr
+// Now the updated arr : [5.6,"Mango","Apple"]
+// has to shift the entire array till the very end, therefore a very costly proposition.
+
+unshift()
+
+arr.unshift(1,2,"Orange") // adds one or more elements to the beginning of an array
+// Now the updated arr : [1,2,"Orange"5.6,"Mango","Apple"]
+// This is also a costly proposition
+
+concat()
+
+arr1 = [1,2,3];
+arr2 = [4,5,6];
+newarr = arr1.concat(arr2); // newarr is [1,2,3,4,5,6]
+
+every()
+
+function positiveNum(num) {
+return num > 0;
+}
+
+arr = [1,2,3,4,5];
+allPositive = arr.every(positiveNum);
+// allPositive is ture
+
+arr = [1,2,3-5,6];
+allPositive = arr.every(PositiveNum);
+// allPositive is false
+
+More to come in Future...
